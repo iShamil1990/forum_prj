@@ -30,6 +30,8 @@
             {% endif %}
             {% if user.is_superuser or user.is_staff %}
                 <a href="{% url 'create_post' %}" class="btn btn-primary">Create new post</a>
+                <a href="{% url 'upload' %}" class="btn btn-secondary">Upload files</a>
+                <a href="{% url 'download' %}" class="btn btn-secondary">Download posts</a>
             {% endif %}
             <table class="table table-striped">
                 <thead>
