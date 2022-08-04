@@ -49,12 +49,6 @@ class DetailPostsView(DetailView):
     model = Post
     template_name = "detail_post.html"
 
-# class CreatePostView(PermissionRequiredMixin, CreateView):
-#     permission_required = 'service.add_post'
-#     model = Post
-#     template_name = "create_post.html"
-#     form_class = PostForm
-
 @login_required
 @permission_required("service.add_post")
 def create_post(req):
